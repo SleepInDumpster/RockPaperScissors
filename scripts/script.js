@@ -6,11 +6,11 @@ function computerPlay(){
     return possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
 }
 
-function playRound(choose, pcchoose){
-    if(choose == "paper" && pcchoose == "rock" || choose=="rock" && pcchoose=="scissors" || choose=="paper" && pcchoose=="rock"){
+function playRound(playerChoose, pcchoose){
+    if(playerChoose == "paper" && pcchoose == "rock" || playerChoose=="rock" && pcchoose=="scissors" || playerChoose=="paper" && pcchoose=="rock"){
         playerScore += 1;
         return `Player win,\n player score: ${playerScore}, \n computer score: ${pcScore}, \n computer choose: ${pcchoose}`;
-    }else if(choose == pcchoose){
+    }else if(playerChoose == pcchoose){
         return `Tie,\n player score: ${playerScore}, \n computer score: ${pcScore}, \n computer choose: ${pcchoose}`;
     } else{
         pcScore += 1;
